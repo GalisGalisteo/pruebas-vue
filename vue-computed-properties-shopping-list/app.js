@@ -34,7 +34,7 @@ createApp({
     // 3. SIEMPRE tienen que devolver (return) un valor
     // 4. Tienen una sintaxis concreta que hay qué conocer
     const didYouBuyTomatoes = computed(() => {
-      return allProducts.value.some((p) => p.name == "tomates");
+      return allProducts.value.some((p) => p.name.includes("tomate"));
     });
 
     return { productName, productPrice, allProducts, addProduct, didYouBuyTomatoes };
